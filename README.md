@@ -2,6 +2,21 @@
 
 This is a standing wave simulation as a damp string project written in Julia.
 
+## Installation
+
+The scripts require only the `Plots` package.
+
+```julia
+using Pkg
+Pkg.add("Plots")
+```
+
+Alternatively,
+
+```julia
+]add Plots
+```
+
 ## Oscillation of a stretched string
 
 A stretched string oscillation is described by the partial differential equation (PDE):
@@ -24,7 +39,7 @@ where `L` represents the length of the string and, as an integer, will act as th
 
 The following animation displays the effect of the number of iterations `N` over the function `g(x)` where `t = 0`.
 
-<img src="string_iterations.gif">
+<img src="gifs/string_iterations.gif">
 
 Adding the time component, the amplitude function is defined as:
 
@@ -38,4 +53,4 @@ is solved for `d_n(t)` taking into account the initial conditions.
 
 Finally, for heavy damping (`k = 4`), the resulting string oscillation is as follows:
 
-<img src="string_animation.gif">
+<img src="gifs/string_animation.gif">
