@@ -8,9 +8,9 @@ L = 1           # Right limit (m)
 x = x₀:step:L   # Range
 N = 0           # Maximum number of iterations
 fps = 30        # Frames per second
-Δt = 10          # seconds
-k = 1           # Damping
-v = 1           # Velocity (m/s)
+Δt = 6          # seconds
+k = 2           # Damping
+v = 2           # Velocity (m/s)
 
 # Fourier coefficient and function
 b(n) = 8*(-1)^n/(π*(2n+1))^2
