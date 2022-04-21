@@ -6,18 +6,18 @@ x₀ = 0          # Left limit (m)
 step = .001     # Step
 L = 1           # Right limit (m)
 x = x₀:step:L   # Range
-N = 1           # Maximum number of iterations
+N = 0           # Maximum number of iterations
 fps = 30        # Frames per second
-Δt = 3          # seconds
-k = 4           # Damping
+Δt = 10          # seconds
+k = 1           # Damping
 v = 1           # Velocity (m/s)
 
 # Fourier coefficient and function
 b(n) = 8*(-1)^n/(π*(2n+1))^2
 g(x, N) = sum([b(n) .* sin.((2n + 1).*x.*π/L) for n in 0:N])
 
-root(n) = k + sqrt(Complex(k^2 - 4*(π + 2*n*π)^2))
-d(t, N) = sum([(exp(-.5*root(n)*t)*(1 + (-1 + exp(root(n) - k)*(1 + .5*(root(n))))/(root(n) - k))) for n in 0:N])
+root(n) = k + sqrt(Complex(k^2 - 4*((1 + 2*n)*π*v)^2))
+d(t, N) = sum([(exp(-.5*root(n)*t)*(1 + (-1 + exp(root(n)*t - k*t)*(1 + .5*(root(n))))/(root(n) - k))) for n in 0:N])
 
 Y(x, t) = g(x, N)*d(t, N)
 
