@@ -24,4 +24,4 @@ iterations = @animate for n in 0:N-1
     ylabel!("Amplitude (m)")
 end
 
-gif(iterations, "string_iterations.gif", fps=fps)
+gif(iterations, "gifs/string_iterations.gif", fps=fps)

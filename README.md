@@ -51,6 +51,6 @@ where
 
 is solved for `d_n(t)` taking into account the initial conditions.
 
-Finally, for heavy damping (`k = 4`), the resulting string oscillation is as follows:
+Finally, with damping `k = 1`, the resulting string oscillation is as follows:
 
 <img src="gifs/string_animation.gif">

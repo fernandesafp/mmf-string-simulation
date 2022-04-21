@@ -33,4 +33,4 @@ wave = @animate for t in 0:1/fps:Δt
     ylabel!("Amplitude (m)")
 end
 
-gif(wave, "string_animation.gif", fps=fps)
+gif(wave, "gifs/string_animation.gif", fps=fps)
