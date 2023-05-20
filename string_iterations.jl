@@ -3,7 +3,7 @@ using Plots
 theme(:dark)
 
 x₀ = 0          # Left limit (m)
-step = .01      # Step
+step = .001     # Step
 L = 1           # Right limit (m)
 x = x₀:step:L   # Range
 N = 15          # Maximum number of iterations
