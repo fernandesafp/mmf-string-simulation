@@ -24,7 +24,7 @@ wave = @animate for current_t = 0:1/wave_fps:Δt
     print("\r")
     print("Completed: $(Int(round(current_t*100/Δt)))%")
     plot(
-        y.doit()(t => current_t), # Extract the real part of the expression
+        y.doit()(t => current_t),
         x₀,
         L,
         grid = false,
