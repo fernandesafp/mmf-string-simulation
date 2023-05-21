@@ -4,18 +4,16 @@ This is a standing wave simulation as a damp string project written in Julia.
 
 ## Installation
 
-The scripts require only the `Plots` package.
+The scripts require the [SymPy.jl](https://github.com/JuliaPy/SymPy.jl) and [Plots.jl](https://github.com/JuliaLang/Pkg.jl) packages.
+
+Either run:
 
 ```julia
-using Pkg
-Pkg.add("Plots")
+]activate .
+]instantiate
 ```
 
-Alternatively,
-
-```julia
-]add Plots
-```
+Or manually add the packages with `Pkg.jl`.
 
 ## Oscillation of a stretched string
 
@@ -51,6 +49,6 @@ where
 
 is solved for `d_n(t)` taking into account the initial conditions.
 
-Finally, with damping `k = 2`, the resulting string oscillation is as follows:
+Finally, the resulting string oscillation is as follows:
 
 <img src="gifs/string_animation.gif">
